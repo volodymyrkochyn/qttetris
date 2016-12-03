@@ -18,7 +18,8 @@ SOURCES += src/main.cpp \
     src/engine/seeder.cpp \
     src/engine/enginebuilder.cpp \
     src/engine/tetrismain.cpp \
-    src/engine/tetrisrawdata.cpp
+    src/engine/tetrisrawdata.cpp \
+    src/engine/tetrisbrick.cpp
 
 HEADERS += \
     src/applicationbuilder.h \
@@ -29,6 +30,7 @@ HEADERS += \
     src/engine/seeder.h \
     src/engine/enginebuilder.h \
     src/engine/tetrismain.h \
-    src/engine/tetrisrawdata.h
+    src/engine/tetrisrawdata.h \
+    src/engine/tetrisbrick.h
 
 INCLUDEPATH += src

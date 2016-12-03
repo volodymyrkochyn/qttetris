@@ -4,10 +4,14 @@
 #include "gameengine.h"
 #include "tetrisrawdata.h"
 
-class RandomGenerator;
+#include <QObject>
 
-class TetrisMain : public GameEngine
+class RandomGenerator;
+class TetrisBrick;
+
+class TetrisMain : public QObject, public GameEngine
 {
+    Q_OBJECT
 public:
     TetrisMain();
     static const int Width = 10;
@@ -20,9 +24,16 @@ public:
 
     void setRandomGenerator(RandomGenerator *generator);
 
+private slots:
+    void brickIsDown();
+
+private:
+    TetrisBrick* generateBrick() const;
+
 private:
     TetrisRawData _data;
     RandomGenerator *_random{nullptr};
+    TetrisBrick *_currentBrick{nullptr};
 };
 
 #endif // TETRISMAIN_H

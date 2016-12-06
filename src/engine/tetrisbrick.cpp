@@ -1,4 +1,5 @@
 #include "tetrisbrick.h"
+#include "defs.h"
 
 TetrisBrick::TetrisBrick()
 {
@@ -27,6 +28,14 @@ QBitArray IBrick::array() const
     return ar;
 }
 
+void IBrick::initBrick(int **startData)
+{
+    int startValue = 4;
+    const int row = 0;
+    while (startValue < 8)
+        startData[row][startValue++] = current;
+}
+
 int JBrick::height() const
 {
     return 2;
@@ -41,4 +50,9 @@ QBitArray JBrick::array() const
     ar.setBit(5);
     ar.setBit(6);
     return ar;
+}
+
+void JBrick::initBrick(int **startData)
+{
+    //
 }

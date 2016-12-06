@@ -31,6 +31,9 @@ HEADERS += \
     src/engine/enginebuilder.h \
     src/engine/tetrismain.h \
     src/engine/tetrisrawdata.h \
-    src/engine/tetrisbrick.h
+    src/engine/tetrisbrick.h \
+    src/engine/defs.h
 
 INCLUDEPATH += src
+INCLUDEPATH += src/engine
+INCLUDEPATH += src/gui

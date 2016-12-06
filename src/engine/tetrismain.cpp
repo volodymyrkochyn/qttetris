@@ -26,11 +26,7 @@ void TetrisMain::stepOver()
     if (!_currentBrick)
         return;
 
-    int width = _currentBrick->array().size() / _currentBrick->height();
-    for (int i = 0; i < _currentBrick->height(); ++i)
-        for (int j = 0; j < width; ++j)
-            if (_currentBrick->array().at(i * j))
-                _data.setBit(j, i);
+    _currentBrick->initBrick(_data.rawData());
 }
 
 void TetrisMain::setRandomGenerator(RandomGenerator *generator)

@@ -6,7 +6,7 @@ class GameEngine
 {
 public:
     GameEngine();
-    virtual ~GameEngine() {}
+    virtual ~GameEngine();
 
     virtual void startGame() =0;
     virtual void stopGame() =0;

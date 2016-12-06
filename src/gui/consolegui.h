@@ -7,6 +7,8 @@ class ConsoleGUI : public GamePlay
 {
 public:
     ConsoleGUI();
+    void startGame() override;
+    void stepOver() override;
 };
 
 #endif // CONSOLEGUI_H

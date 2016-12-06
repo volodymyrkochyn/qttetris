@@ -1,4 +1,5 @@
 #include "tetrisrawdata.h"
+#include "defs.h"
 
 TetrisRawData::TetrisRawData(int width, int height) :
     _width(width),
@@ -11,13 +12,6 @@ TetrisRawData::~TetrisRawData()
 {
     for (int i = 0; i < _width; ++i)
         delete[] _raw;
-}
-
-void TetrisRawData::setBit(int x, int y)
-{
-    if (x >= 0 && x < _width)
-        if (y >=0 && y < _height)
-            _raw[x][y] = full;
 }
 
 bool TetrisRawData::test(int **value, int size_w, int size_h)

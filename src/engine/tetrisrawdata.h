@@ -7,14 +7,13 @@ class TetrisRawData : public QObject
 {
     Q_OBJECT
 public:
-    enum Values { empty, full };
     TetrisRawData(int width, int height);
     ~TetrisRawData();
 
-    void setBit(int x, int y);
     bool test(int **value, int size_w, int size_h);
 
     void clear();
+    int** rawData() const { return _raw; }
 
 signals:
     void rowFull(int);
